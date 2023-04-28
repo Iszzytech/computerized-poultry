@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C32A135B-0D56-4CDA-9483-C5A9279B2277}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Computerized_Poultry_Farm</RootNamespace>
+    <AssemblyName>Computerized Poultry Farm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Itone Media Player\Itone Media Player\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Itone Media Player\Itone Media Player\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FOLARIN COKER CLINIC FORM\FOLARIN COKER CLINIC FORM\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="batchFlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="batchFlock.Designer.cs">
+      <DependentUpon>batchFlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="breedType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="breedType.Designer.cs">
+      <DependentUpon>breedType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="breedTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="breedTypeForm.Designer.cs">
+      <DependentUpon>breedTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection\ServerConnection.cs" />
+    <Compile Include="customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer.Designer.cs">
+      <DependentUpon>customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="eggRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="eggRecord.Designer.cs">
+      <DependentUpon>eggRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expense_cat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expense_cat.Designer.cs">
+      <DependentUpon>expense_cat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expense_Record.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Expense_Record.Designer.cs">
+      <DependentUpon>Expense_Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hatchery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="hatchery.Designer.cs">
+      <DependentUpon>hatchery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="incomeCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="incomeCat.Designer.cs">
+      <DependentUpon>incomeCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Income_Record.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Income_Record.Designer.cs">
+      <DependentUpon>Income_Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoultryDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoultryDoc.Designer.cs">
+      <DependentUpon>PoultryDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrationForm.Designer.cs">
+      <DependentUpon>registrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report_expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_expense.Designer.cs">
+      <DependentUpon>report_expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report_income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_income.Designer.cs">
+      <DependentUpon>report_income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report_sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_sales.Designer.cs">
+      <DependentUpon>report_sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sales.Designer.cs">
+      <DependentUpon>sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="staff.Designer.cs">
+      <DependentUpon>staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffDash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="staffDash.Designer.cs">
+      <DependentUpon>staffDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaccination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vaccination.Designer.cs">
+      <DependentUpon>Vaccination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vac_medication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vac_medication.Designer.cs">
+      <DependentUpon>vac_medication.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="batchFlock.resx">
+      <DependentUpon>batchFlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="breedType.resx">
+      <DependentUpon>breedType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="breedTypeForm.resx">
+      <DependentUpon>breedTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer.resx">
+      <DependentUpon>customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eggRecord.resx">
+      <DependentUpon>eggRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expense_cat.resx">
+      <DependentUpon>expense_cat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expense_Record.resx">
+      <DependentUpon>Expense_Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hatchery.resx">
+      <DependentUpon>hatchery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="incomeCat.resx">
+      <DependentUpon>incomeCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Income_Record.resx">
+      <DependentUpon>Income_Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoultryDoc.resx">
+      <DependentUpon>PoultryDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="registrationForm.resx">
+      <DependentUpon>registrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Expense.rdlc" />
+    <EmbeddedResource Include="report_expense.resx">
+      <DependentUpon>report_expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_income.rdlc" />
+    <EmbeddedResource Include="report_income.resx">
+      <DependentUpon>report_income.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_sales.rdlc" />
+    <EmbeddedResource Include="report_sales.resx">
+      <DependentUpon>report_sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales.resx">
+      <DependentUpon>sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff.resx">
+      <DependentUpon>staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffDash.resx">
+      <DependentUpon>staffDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaccination.resx">
+      <DependentUpon>Vaccination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vac_medication.resx">
+      <DependentUpon>vac_medication.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
